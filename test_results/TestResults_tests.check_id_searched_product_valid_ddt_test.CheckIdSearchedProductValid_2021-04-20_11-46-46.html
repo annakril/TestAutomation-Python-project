@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2021-04-20 11:46:46</p>
+                <p class='attribute'><strong>Duration: </strong>77.99 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 3, Fail: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>tests.check_id_searched_product_valid_ddt_test.CheckIdSearchedProductValid</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_check_id_searched_product_valid_1___Lynia_Krem_nawil¿aj¹co_z³uszczaj¹cy____12452__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_check_id_searched_product_valid_2___Lynia_Multi_Repair_Regeneruj¹cy_krem_pod_oczy____14737__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_check_id_searched_product_valid_3___Asoa_Gotowa_maseczka_do_twarzy_Fioletowa_glinka____21200__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: '21200' != '21197'
+- 21200
++ 21197
+ : Expected searched ID product is: "21200", actual ID is differ "21197"</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\akril\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\akril\PycharmProjects\projectCDV\tests\check_id_searched_product_valid_ddt_test.py", line 33, in test_check_id_searched_product_valid
+    self.assertEqual(product_id, actual_product_id, f'Expected searched ID product is: "{product_id}", actual ID is differ "{actual_product_id}"')
+AssertionError: '21200' != '21197'
+- 21200
++ 21197
+ : Expected searched ID product is: "21200", actual ID is differ "21197"
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_check_id_searched_product_valid_4___Sesderma_C_Vit_Liposomal_Serum_Antiox_Booster_System_Intensywne_serum_liposomowe____15401__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 4, Pass: 3, Fail: 1 -- Duration: 77.99 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
