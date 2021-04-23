@@ -8,7 +8,6 @@ class BaseTest(unittest.TestCase):
         self.driver = webdriver.Chrome(DataBase.executable_path)
         driver = self.driver
         driver.get(DataBase.url)
-        max
 
     def tearDown(self):
         self.driver.quit()
